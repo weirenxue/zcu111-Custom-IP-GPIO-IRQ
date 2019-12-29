@@ -26,7 +26,7 @@
 <p align=center><img src="https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/feature-create-custom-ip/pic/IP_verilog.png"  title="IP verilog" width="50%"></p>
 
 
-#### 6. 先修改myip_v1_0_S00_AXI_inst:myip_V1_0_S00_AXI，並存檔。
+#### 6. 先修改myip_v1_0_S00_AXI_inst:myip_v1_0_S00_AXI(myip_v1_0_S00_AXI.v)，並存檔。
 <p align=center><img src="https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/feature-create-custom-ip/pic/Inst_verilog.png"  title="Instance verilog" width="50%"></p>
 
 #### 7. 再修改myip_v1_0(myip_v1_0.v)，存檔後確定沒有語法錯誤的提示。
