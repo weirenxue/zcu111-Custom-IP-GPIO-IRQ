@@ -48,3 +48,20 @@
 
 #### 12. 會出現要不要關閉此IP專案，通常在開發階段我是不會關的，如果還要改的話就直接改，不需要重新開啟。
 <p align=center><img src="https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/feature-create-custom-ip/pic/Close_Project_or_not.png"  title="Close Project or not" width="20%"></p>
+
+#### 13. 叫出MPSoC、ILA和自定義IP GPIP_irq。
+    1. MPSoC：
+		Run Block Automation和Run Conneciton Automation按一按，不需額外設定。
+    2. ILA：
+		設定兩個Probe，深度皆為1(參考:[zcu111-ILA](https://github.com/weirenxue/zcu111-ILA)步驟3)，分別連接到irq與clk_lf。
+	3. GPIP_irq:
+		AXI的部分也使用Run Conneciton Automation，clk_lf則用Make External拉出(參考:[zcu111-EMIO](https://github.com/weirenxue/zcu111-EMIO)步驟4)，irq直接拉到MPSoC上的pl_ps_irq。
+<p align=center><img src="https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/feature-create-custom-ip/pic/System_Diagram.png"  title="System Diagram" width="100%"></p>
+
+#### 14. 加入一個約束檔/code/top.dxc(參考:[zcu111-EMIO](https://github.com/weirenxue/zcu111-EMIO)步驟7)，指定clk_lf接到實體按鈕GPIO_SW_C。
+
+#### 15. 跑Generate Bitstream後開啟SDK(參考:[zcu111-EMIO](https://github.com/weirenxue/zcu111-EMIO)步驟8~11)。
+
+
+
+
