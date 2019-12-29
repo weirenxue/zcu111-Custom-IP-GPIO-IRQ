@@ -15,8 +15,8 @@
 	)
 	(
 		// Users to add ports here
-        input wire clk_lf,
-        output wire irq,
+        	input wire clk_lf,
+        	output wire irq,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -71,7 +71,7 @@
 		.S_AXI_RVALID(s00_axi_rvalid),
 		.S_AXI_RREADY(s00_axi_rready),
 		.CLK_LF(clk_lf),
-        .IRQ(irq)
+        	.IRQ(irq)
 	);
 
 	// Add user logic here
