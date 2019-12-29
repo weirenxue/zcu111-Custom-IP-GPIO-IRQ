@@ -407,6 +407,7 @@
 	always @(posedge S_AXI_ACLK)
 	CLK_LF_prev <= CLK_LF;
 	always @(*) begin
+	// slv_reg0[0] is Enable flag
 	if (CLK_LF && !CLK_LF_prev && slv_reg0[0])
 	    irq <= 1;
 	else if (~slv_reg0[0])
