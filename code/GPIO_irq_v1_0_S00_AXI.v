@@ -15,10 +15,10 @@
 	)
 	(
 		// Users to add ports here
-        // Low Frequency Clock  
-        input wire CLK_LF,
-        // Interrupt request
-        output wire IRQ,
+		// Low Frequency Clock  
+		input wire CLK_LF,
+		// Interrupt request
+		output wire IRQ,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -401,19 +401,19 @@
 	end    
 
 	// Add user logic here
-    reg CLK_LF_prev;
-    reg irq;
-    assign IRQ = irq;
-    always @(posedge S_AXI_ACLK)
-        CLK_LF_prev <= CLK_LF;
-    always @(*) begin
-        if (CLK_LF && !CLK_LF_prev && slv_reg0[0])
-            irq <= 1;
-        else if (~slv_reg0[0])
-            irq <= 0;
-        else if (S_AXI_ACLK && !S_AXI_ARESETN)
-            irq <= 0;
-    end
+	reg CLK_LF_prev;
+	reg irq;
+	assign IRQ = irq;
+	always @(posedge S_AXI_ACLK)
+	CLK_LF_prev <= CLK_LF;
+	always @(*) begin
+	if (CLK_LF && !CLK_LF_prev && slv_reg0[0])
+	    irq <= 1;
+	else if (~slv_reg0[0])
+	    irq <= 0;
+	else if (S_AXI_ACLK && !S_AXI_ARESETN)
+	    irq <= 0;
+	end
 	// User logic ends
 
 	endmodule
