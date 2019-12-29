@@ -58,7 +58,14 @@
 
 14. 加入一個約束檔/code/top.dxc(參考:[zcu111-EMIO][]步驟7)，指定clk_lf接到實體按鈕GPIO_SW_C。
 
-15. 跑Generate Bitstream後開啟SDK(參考:[zcu111-EMIO][]步驟8~11)。
+15. 跑Generate Bitstream，然後開啟SDK(參考:[zcu111-EMIO][]步驟8~11)。
+
+16. 在Vivado中開啟Hardware Manager(參考:[zcu111-ILA][]步驟7~12)。
+
+17. 在SDK中開啟一個Application Project(參考:[zcu111-EMIO][]步驟12~15)，將/code/main.c中的內容複製到專案內的\*.c檔，並編譯確認無error，即可燒錄(參考:[zcu111-EMIO][]步驟18)。
+
+18. 此時回到Vivado中的Hardware Manager，調整ila觸發條件。
+
 
 
 
