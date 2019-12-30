@@ -64,8 +64,17 @@
 
 17. 在SDK中開啟一個Application Project(參考:[zcu111-EMIO][]步驟12~15)，將/code/main.c中的內容複製到專案內的\*.c檔，並編譯確認無error，即可燒錄(參考:[zcu111-EMIO][]步驟18)。
 
-18. 此時回到Vivado中的Hardware Manager，調整ila觸發條件。
+18. 回到Vivado中的Hardware Manager，本設計是當clk_lf為正緣時，irq就會asserted，因此調整ILA觸發條件，當clk_lf為R(0-to-1 transition)，設定好後按Run trigger等待觸發條件完成。
+<p align=center><img src="https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/feature-create-custom-ip/pic/Set_CLK_LF_trigger_type.png"  title="Set CLK LF trigger type width="100%"></p>
 
+19. 按下按鈕(對應到約束檔的那個按紐)，ILA會抓到正緣訊號，但因Enable flag(slv_reg0[0])為0，因此irq不會有反應。
+<p align=center><img src="https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/feature-create-custom-ip/pic/Situation_In_Enable_Flag_Is_Deasserted.png"  title="Situation In Enable Flag Is Deasserted" width="100%"></p>
+
+20. 回到SDK將slv_reg0[0]設定為1，並在ila視窗按Run trigger，可預期若此時按下按鈕，irq就會asserted。
+<p align=center><img src="https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/feature-create-custom-ip/pic/Set_slv_reg0.png"  title="Set slv_reg0\[0\]" width="20%"></p>
+
+21. 按下按鈕，觀察波型。
+<p align=center><img src="https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/feature-create-custom-ip/pic/Situation_In_Enable_Flag_Is_Asserted.png"  title="Situation In Enable Flag Is Asserted" width="100%"></p>
 
 
 

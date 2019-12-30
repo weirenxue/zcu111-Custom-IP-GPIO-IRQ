@@ -53,7 +53,7 @@ int main()
 	while(1)
 	{
 		// Convenience to change the Enable flag
-		printf("x=");
+		printf("slv_reg0[0]=");
 		scanf("%d", &x);
 		printf("%d\n",x);
 		Xil_Out32(XPAR_GPIO_IRQ_0_S00_AXI_BASEADDR, x&0x01);
