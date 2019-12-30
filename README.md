@@ -70,8 +70,8 @@
 19. 按下按鈕(對應到約束檔的那個按紐)，ILA會抓到正緣訊號，但因Enable flag(slv_reg0[0])為0，因此irq不會有反應。
 <p align=center><img src="https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/feature-create-custom-ip/pic/Situation_In_Enable_Flag_Is_Deasserted.png"  title="Situation In Enable Flag Is Deasserted" width="100%"></p>
 
-20. 回到SDK將slv_reg0[0]設定為1，並在ila視窗按Run trigger，可預期若此時按下按鈕，irq就會asserted。
-<p align=center><img src="https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/feature-create-custom-ip/pic/Set_slv_reg0.png"  title="Set slv_reg0\[0\]" width="20%"></p>
+20. 回到SDK將slv_reg0[0]設定為1，並在hw_ila視窗按Run trigger，可預期若此時按下按鈕，irq就會asserted。
+<p align=center><img src="https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/feature-create-custom-ip/pic/Set_slv_reg0.png"  title="Set slv_reg0\[0\]" width="40%"></p>
 
 21. 按下按鈕，觀察波型。
 <p align=center><img src="https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/feature-create-custom-ip/pic/Situation_In_Enable_Flag_Is_Asserted.png"  title="Situation In Enable Flag Is Asserted" width="100%"></p>
