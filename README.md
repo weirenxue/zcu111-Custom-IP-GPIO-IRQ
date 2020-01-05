@@ -56,7 +56,7 @@
 		AXI的部分也使用Run Conneciton Automation，clk_lf則用Make External拉出(參考:[zcu111-EMIO][]步驟4)，irq直接拉到MPSoC上的pl_ps_irq。
 <p align=center><img src="https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/master/pic/System_Diagram.png"  title="System Diagram" width="100%"></p>
 
-14. 加入一個約束檔[top.dxc][](參考:[zcu111-EMIO][]步驟7)，指定clk_lf接到實體按鈕GPIO_SW_C。
+14. 加入一個約束檔[top.xdc][](參考:[zcu111-EMIO][]步驟7)，指定clk_lf接到實體按鈕GPIO_SW_C。
 
 15. 跑Generate Bitstream，然後開啟SDK(參考:[zcu111-EMIO][]步驟8~11)。
 
@@ -81,5 +81,7 @@
 
   [zcu111-ILA]: https://github.com/weirenxue/zcu111-ILA        "zcu111-ILA"
   [zcu111-EMIO]:  https://github.com/weirenxue/zcu111-EMIO  "zcu111-EMIO"
-  [top.dxc]: https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/master/code/top.xdc "/code/top.dxc"
+  [top.xdc]: https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/master/code/top.xdc "/code/top.dxc"
   [main.c]: https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/master/code/main.c "/code/main.c"
+  [GPIO_irq_v1_0_S00_AXI.v]: https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/master/code/GPIO_irq_v1_0_S00_AXI.v "/code/GPIO_irq_v1_0_S00_AXI.v"
+  [GPIO_irq_v1_0.v]:https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/master/code/GPIO_irq_v1_0.v "/code/GPIO_irq_v1_0.v"
