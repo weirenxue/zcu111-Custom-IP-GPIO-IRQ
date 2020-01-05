@@ -26,10 +26,10 @@
 <p align=center><img src="https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/master/pic/IP_verilog.png"  title="IP verilog" width="50%"></p>
 
 
-6. 先修改GPIO_irq_v1_0_S00_AXI.v，並存檔。
+6. 先修改[GPIO_irq_v1_0_S00_AXI.v][]，並存檔。
 <p align=center><img src="https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/master/pic/Inst_verilog.png"  title="Instance verilog" width="50%"></p>
 
-7. 再修改GPIO_irq_v1_0.v，存檔後確定沒有語法錯誤的提示。
+7. 再修改[GPIO_irq_v1_0.v][]，存檔後確定沒有語法錯誤的提示。
 <p align=center><img src="https://github.com/weirenxue/zcu111-Custom-IP-GPIO-IRQ/blob/master/pic/Wrapper_verilog.png"  title="Wrapper verilog" width="50%"></p>
 
 8. 回到Package IP頁面中的Port and Interfaces，點擊上排藍字，自動合併改變。
